@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Important Hadees</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="string_error_no_network_dialog">No Network Connection Available</string>
+    <string name="error_no_network">no network</string>
+    <string name="initial_processing">Initial Processing..</string>
+    <string name="err_no_play_service">Your device does not support Google Play Service. Application will not generate push notifications.</string>
+    <string name="err_play_service_title">Play Service Error:</string>
+</resources>
