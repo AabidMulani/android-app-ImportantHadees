@@ -18,7 +18,7 @@ import retrofit.http.Query;
 public interface WebServiceInterface {
 
     @GET("/get_hadees.php")
-    void getHadees(@Query("id") String category, Callback<List<HadeesResponse>> callback);
+    void getHadees(@Query("id") String limit, Callback<List<HadeesResponse>> callback);
 
     @FormUrlEncoded
     @POST("/add_device.php")

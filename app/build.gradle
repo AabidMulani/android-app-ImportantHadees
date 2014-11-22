@@ -3,7 +3,6 @@ buildscript {
     repositories {
         maven { url 'http://download.crashlytics.com/maven' }
     }
-
     dependencies {
         classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
     }
@@ -30,7 +29,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 21
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1.0"
     }
     signingConfigs {
         debug {

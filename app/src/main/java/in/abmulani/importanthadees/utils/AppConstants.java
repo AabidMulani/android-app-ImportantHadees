@@ -6,4 +6,7 @@ public class AppConstants {
     public static final String GOOGLE_SENDER_ID = "191048728671";
     public static int resumeCount = 0;
     public static int pauseCount = 0;
+    public static int RESPONSE_LIMIT_COUNT = 50;
+
+    public static String PLAY_STORE_URL = "www.google.com";
 }

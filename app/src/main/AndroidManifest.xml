@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <permission
         android:name="in.abmulani.importanthadees.permission.C2D_MESSAGE"
@@ -34,6 +35,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.DetailViewActivity"
+            android:label="@string/app_name"/>
+
         <meta-data
             android:name="com.crashlytics.ApiKey"
             android:value="38cfa6c6c4c701db148187e11eefa4a964c1af8d"/>
@@ -43,16 +48,14 @@
 
         <receiver
             android:name=".utils.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.citruspay.LOCAL_NOTIFICATION" />
-
-                <category android:name="com.citruspay" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="in.abmulani.importanthadees"/>
             </intent-filter>
         </receiver>
 
-        <service android:name=".utils.GcmIntentService" />
+        <service android:name=".utils.GcmIntentService"/>
 
         <meta-data
             android:name="DATABASE"

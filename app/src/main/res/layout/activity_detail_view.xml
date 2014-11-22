@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <in.abmulani.importanthadees.widgets.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:minLines="3"
+            android:gravity="center"
+            android:textColor="@color/theme_main_color"
+            android:id="@+id/textView_title"/>
+
+        <in.abmulani.importanthadees.widgets.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/theme_main_color"
+            android:id="@+id/textView_desc"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#B0B0B0"/>
+
+        <in.abmulani.importanthadees.widgets.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/background_color"
+            android:text="@string/reference"/>
+
+        <in.abmulani.importanthadees.widgets.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/theme_main_color"
+            android:linksClickable="true"
+            android:autoLink="all"
+            android:textColorLink="@color/wallet_holo_blue_light"
+            android:id="@+id/textView_reference"/>
+
+    </LinearLayout>
+
+</ScrollView>

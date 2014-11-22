@@ -16,7 +16,7 @@ import in.abmulani.importanthadees.utils.Utils;
  */
 public class BaseActivity extends ActionBarActivity {
 
-    public static final String NO_INTERNET_FILTER = "com.citruspay.NO_INTERNET";
+    public static final String NO_INTERNET_FILTER = "in.abmulani.importanthadees.NO_INTERNET";
     protected Activity activity;
     protected BaseApplication application;
 

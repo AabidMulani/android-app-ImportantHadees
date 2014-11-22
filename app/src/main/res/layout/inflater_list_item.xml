@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:id="@+id/layout_parent"
+    android:background="@color/theme_main_color">
+
+    <in.abmulani.importanthadees.widgets.BoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_title"
+        android:textSize="18sp"
+        android:singleLine="false"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/textView_desc"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <in.abmulani.importanthadees.widgets.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_desc"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <in.abmulani.importanthadees.widgets.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:text="New!"
+        android:padding="5dp"
+        android:id="@+id/textView_is_new"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/textView_title"
+        android:layout_alignRight="@+id/textView_title"/>
+
+</RelativeLayout>

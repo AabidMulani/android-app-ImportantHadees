@@ -34,7 +34,7 @@ public class GcmIntentService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         extras = intent.getExtras();
         GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-        Timber.e("PREFERENCE USER ID : " + extras.getString("message"));
+        Timber.e("Bundle Msg : " + extras.getString("message"));
         if (!extras.isEmpty()) {
             computeReminderNotification(extras);
         }
@@ -46,6 +46,7 @@ public class GcmIntentService extends IntentService {
         String alertMsg = extras.getString("message");
         Intent contentIntent;
         contentIntent = new Intent(this, HomeScreenActivity.class);
+        contentIntent.putExtra(HomeScreenActivity.EXTRA_REFRESH, true);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,
                 NOTIFY_REQUEST_CODE, contentIntent, PendingIntent.FLAG_ONE_SHOT);
         showNotification(++AppConstants.NOTIFICATION_ID, alertMsg, pendingIntent);
@@ -60,9 +61,9 @@ public class GcmIntentService extends IntentService {
                         .setSmallIcon(R.drawable.ic_launcher)
                         .setContentTitle(getResources().getString(R.string.app_name))
                         .setStyle(new NotificationCompat.BigTextStyle().bigText(alertMsg))
-                        .setAutoCancel(true).setContentIntent(intent)
-                        .setSound(alarmSound)
-                        .setContentText(alertMsg);
+                        .setAutoCancel(true)
+                        .setContentIntent(intent)
+                        .setSound(alarmSound);
         if (Build.VERSION.SDK_INT >= 16) {
             mBuilder.setPriority(Notification.PRIORITY_MAX);
         }

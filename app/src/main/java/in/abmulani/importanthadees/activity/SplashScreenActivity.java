@@ -16,7 +16,8 @@ public class SplashScreenActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         Timber.d("onCreate");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        setContentView(R.layout.activity_splash_screen);
         isBackPressed = false;
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -30,7 +31,6 @@ public class SplashScreenActivity extends Activity {
             }
         }, 3000);
     }
-
 
     @Override
     public void onBackPressed() {

@@ -11,7 +11,7 @@ public class NoInternetException extends IOException {
 
     public NoInternetException(Context context) {
         super(context.getString(R.string.error_no_network));
-        Intent i = new Intent("com.citruspay.NO_INTERNET");
+        Intent i = new Intent("in.abmulani.importanthadees.NO_INTERNET");
         context.sendBroadcast(i);
     }
 }

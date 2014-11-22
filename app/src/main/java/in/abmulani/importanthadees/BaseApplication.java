@@ -10,6 +10,7 @@ import com.squareup.okhttp.OkHttpClient;
 
 import java.util.Date;
 
+import in.abmulani.importanthadees.database.HadeesTable;
 import in.abmulani.importanthadees.utils.AppConstants;
 import in.abmulani.importanthadees.utils.ConnectivityAwareUrlClient;
 import in.abmulani.importanthadees.utils.CrashlyticsTree;
@@ -36,7 +37,8 @@ public class BaseApplication extends SugarApp {
             Crashlytics.start(this);
             Timber.plant(new CrashlyticsTree());
         }
-
+        Timber.e("Initial Start");
+        HadeesTable.hasThisRowCount("");
     }
 
     @Override

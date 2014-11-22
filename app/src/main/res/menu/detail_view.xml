@@ -4,12 +4,18 @@
       tools:context=".HomeScreen">
 
     <item
-        android:id="@+id/action_refresh"
-        android:title="@string/action_refresh"
-        android:icon="@drawable/ic_action_refresh"
+        android:id="@+id/action_share"
+        android:title="@string/action_share_hadees"
+        android:icon="@drawable/ic_action_social_share"
         android:orderInCategory="100"
         app:showAsAction="always"/>
 
+    <item
+        android:id="@+id/action_mark_read"
+        android:title="@string/action_mark_not_read"
+        android:icon="@drawable/ic_action_mark_read"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView"/>
 
     <item
         android:id="@+id/action_share_app"
